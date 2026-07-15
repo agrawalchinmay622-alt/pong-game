@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    letter-spacing: 2px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(0, 20, 40, 0.8);
+    border-radius: 10px;
+    border: 2px solid #00d4ff;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.score .label {
+    font-size: 0.9em;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.score-value {
+    font-size: 3em;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+#pongCanvas {
+    display: block;
+    margin: 20px auto;
+    background: linear-gradient(90deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    border: 3px solid #00d4ff;
+    border-radius: 5px;
+    cursor: none;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.instructions {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0, 20, 40, 0.6);
+    border-left: 4px solid #00d4ff;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.8;
+}
+
+.instructions p {
+    margin: 8px 0;
+}
+
+.instructions strong {
+    color: #00ff00;
+}
+
+@media (max-width: 768px) {
+    #pongCanvas {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .scoreboard {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .score-value {
+        font-size: 2em;
+    }
+}
